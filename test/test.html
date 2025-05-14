@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="../swiper-bundle.min.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Test</title>
+</head>
+<body>
+    <header class="hero">
+        <div class="canvas-container">
+            <canvas id="canv" width="32" height="32"></canvas>
+        </div>
+        <div class="header-text-main-container">
+            <div class="header-text-container">
+                <h1 class="header-text">Tabs or spaces Soup or Stew Debugging Both, I'm Person!</h1>
+                <p class="header-text" data-overlay aria-hidden="true"></p>
+            </div>
+        </div>        
+    </header>
+
+    <div class="main">
+        <div class="intro">
+            <div class="header-para">
+                <h2>I'm a computer science new grad from the University of Alberta, specializing in web development and automation. I have recently completed my 16-month co-op program at IBM.</h2>
+            </div>
+        </div>
+
+
+        <div class="tech-sec">
+            <h2>Some technologies I have worked with:</h2>
+            <div class="tech">
+                <div class="elem"><img src="../asset/aws.svg" alt=""></div>
+                <div class="elem"><img src="../asset/c.svg" alt=""></div>
+                <div class="elem"><img src="../asset/cloudinary.svg" alt=""></div>
+                <div class="elem"><img src="../asset/css-3.svg" alt=""></div>
+                <div class="elem"><img src="../asset/firebase.svg" alt=""></div>
+                <div class="elem"><img src="../asset/github-icon.svg" alt=""></div>
+                <div class="elem"><img src="../asset/html-5.svg" alt=""></div>
+                <div class="elem"><img src="../asset/java.svg" alt=""></div>
+                <div class="elem"><img src="../asset/javascript.svg" alt=""></div>
+                <div class="elem"><img src="../asset/mariadb.svg" alt=""></div>
+                <div class="elem"><img src="../asset/mongodb-icon.svg" alt=""></div>
+                <div class="elem"><img src="../asset/python.svg" alt=""></div>
+                <div class="elem"><img src="../asset/react.svg" alt=""></div>
+                <div class="elem"><img src="../asset/sqlite.svg" alt=""></div>
+            </div>
+        </div>
+
+
+
+        <template id="project-card-template">
+            <article class="project-card">
+                <div class="logo">
+                    <div class="gradient"></div>
+                    <img src="../asset/logo.png" alt="" class="card-img">
+                </div>
+
+                <div class="card-info">
+                    <h2>Event Mate</h2>
+                    <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
+                </div>
+                <div class="card-tech">
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="logo">
+                    <div class="gradient"></div>
+                    <img src="../asset/logo.png" alt="" class="card-img">
+                </div>
+
+                <div class="card-info">
+                    <h2>Event Mate</h2>
+                    <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
+                </div>
+                <div class="card-tech">
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="logo">
+                    <div class="gradient"></div>
+                    <img src="../asset/logo.png" alt="" class="card-img">
+                </div>
+
+                <div class="card-info">
+                    <h2>Event Mate</h2>
+                    <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
+                </div>
+                <div class="card-tech">
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+            </article>
+        </template>
+
+        <section class="projects">
+            <!-- <div class="project-container swiper">
+                <div class="all-projects-dummy all-projects">
+                    <div class="swiper-wrapper-dummy swiper-wrapper">
+                        <article class="project-card swiper-slide">
+                            <div class="logo">
+                                <div class="gradient"></div>
+                                <img src="../asset/logo.png" alt="" class="card-img">
+                            </div>
+
+                            <div class="card-info">
+                                <h2>Event Mate</h2>
+                                <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
+                            </div>
+                            <div class="card-tech">
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card swiper-slide">
+                            <div class="logo">
+                                <div class="gradient"></div>
+                                <img src="../asset/logo.png" alt="" class="card-img">
+                            </div>
+
+                            <div class="card-info">
+                                <h2>Event Mate</h2>
+                                <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
+                            </div>
+                            <div class="card-tech">
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card swiper-slide">
+                            <div class="logo">
+                                <div class="gradient"></div>
+                                <img src="../asset/logo.png" alt="" class="card-img">
+                            </div>
+
+                            <div class="card-info">
+                                <h2>Event Mate</h2>
+                                <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
+                            </div>
+                            <div class="card-tech">
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                                <span>html</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div> -->
+        </section>
+
+    </div>
+
+    
+</body>
+
+<script src="../swiper-bundle.min.js"></script>
+<script src="test.js"></script>
+</html>

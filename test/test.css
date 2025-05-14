@@ -1,0 +1,302 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+
+
+
+
+body {
+    font-family: "Roboto", system-ui;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f6f9fc;
+}
+
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    padding: 1em;
+    height: 42vh;
+}
+
+.canvas-container {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    height: 45vh;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+}
+
+.header-text-main-container {
+    position: relative;
+    --max-width: 60rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+
+.header-text-container {
+    margin-top: 22vh;
+}
+
+.header-text {
+    color: #3a3a3a;
+    mix-blend-mode: color-burn;
+    font-size: clamp(2.2rem, 9vw, 3.8rem);
+    /* font-size: 3.8rem; */
+    max-width: 15ch;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-text[data-overlay] {
+    mix-blend-mode: revert;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    color: #2e2c2c;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    margin-top: 5rem;
+    border: 2px solid green;
+    --max-width: 60rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.intro {
+    padding-block: 2rem;
+}
+
+.tech {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.tech .elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech img {
+    height: auto;
+    width: 50%;
+}
+
+
+.projects {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container {
+    padding-block: 2rem;
+}
+
+.all-projects {
+    /* margin-inline: 1.75rem; */
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+.project-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 7px 8px #838282;
+    background-color: white;
+    height: 100%;
+
+}
+
+
+.card-img {
+    width: 75%;
+}
+
+.project-card .logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f9fc;
+    border-radius: 10px;
+    margin: 0.3rem;
+    height: 300px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.card-info h2 {
+    font-size: 1.5rem;
+    padding-block: 1rem;
+}
+
+.card-info h3 {
+    line-height: 1.5;
+}
+
+.card-tech {
+    padding-inline: 2rem;
+    padding-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    text-align: center;
+    row-gap: 0.2rem;
+    gap: 0.5rem;
+    column-gap: 0.5rem;
+    justify-content: center;
+}
+
+.card-tech span {
+    border-radius: 25px;
+    background-color: #635bff;
+    color: white;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.swiper-pagination-bullet {
+    background-color: hsl(212, 32%, 40%);
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: var(--second-color);
+  }
+
+@media (min-width: 475px) {
+    .header-text-container {
+        margin-top: 18vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .header-text-container {
+        margin-top: 12vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    .header-text-container {
+        margin-top: 8vh;
+    }
+}
+
+@media (min-width: 1600px) {
+    .header-text-container {
+        margin-top: 15vh;
+    }
+}
+
+@media (min-width: 750px) {
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .project-card {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 520px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 5px 7px 8px #838282;
+        background-color: white;
+    }
+    
+    .card-img {
+        width: 75%;
+    }
+    
+    .project-card .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f9fc;
+        border-radius: 10px;
+        margin: 0.3rem;
+        height: 312px;
+    }
+}
