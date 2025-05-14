@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>utshasamanta</title>
+    <title>Test</title>
 </head>
 <body>
     <header class="hero">
@@ -33,29 +35,32 @@
         <div class="tech-sec">
             <h2>Some technologies I have worked with:</h2>
             <div class="tech">
-                <div class="elem"><img src="asset/aws.svg" alt=""></div>
-                <div class="elem"><img src="asset/c.svg" alt=""></div>
-                <div class="elem"><img src="asset/cloudinary.svg" alt=""></div>
-                <div class="elem"><img src="asset/css-3.svg" alt=""></div>
-                <div class="elem"><img src="asset/firebase.svg" alt=""></div>
-                <div class="elem"><img src="asset/github-icon.svg" alt=""></div>
-                <div class="elem"><img src="asset/html-5.svg" alt=""></div>
-                <div class="elem"><img src="asset/java.svg" alt=""></div>
-                <div class="elem"><img src="asset/javascript.svg" alt=""></div>
-                <div class="elem"><img src="asset/mariadb.svg" alt=""></div>
-                <div class="elem"><img src="asset/mongodb-icon.svg" alt=""></div>
-                <div class="elem"><img src="asset/python.svg" alt=""></div>
-                <div class="elem"><img src="asset/react.svg" alt=""></div>
-                <div class="elem"><img src="asset/sqlite.svg" alt=""></div>
+                <div class="elem"><img src="../asset/aws.svg" alt=""></div>
+                <div class="elem"><img src="../asset/c.svg" alt=""></div>
+                <div class="elem"><img src="../asset/cloudinary.svg" alt=""></div>
+                <div class="elem"><img src="../asset/css-3.svg" alt=""></div>
+                <div class="elem"><img src="../asset/firebase.svg" alt=""></div>
+                <div class="elem"><img src="../asset/github-icon.svg" alt=""></div>
+                <div class="elem"><img src="../asset/html-5.svg" alt=""></div>
+                <div class="elem"><img src="../asset/java.svg" alt=""></div>
+                <div class="elem"><img src="../asset/javascript.svg" alt=""></div>
+                <div class="elem"><img src="../asset/mariadb.svg" alt=""></div>
+                <div class="elem"><img src="../asset/mongodb-icon.svg" alt=""></div>
+                <div class="elem"><img src="../asset/python.svg" alt=""></div>
+                <div class="elem"><img src="../asset/react.svg" alt=""></div>
+                <div class="elem"><img src="../asset/sqlite.svg" alt=""></div>
             </div>
         </div>
 
-        <div class="projects">
-            <div class="project-card">
+
+
+        <template id="project-card-template">
+            <article class="project-card">
                 <div class="logo">
                     <div class="gradient"></div>
                     <img src="./asset/logo.png" alt="" class="card-img">
                 </div>
+
                 <div class="card-info">
                     <h2>Event Mate</h2>
                     <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
@@ -69,59 +74,58 @@
                     <span>html</span>
                     <span>html</span>
                 </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
                 <div class="logo">
+                    <div class="gradient"></div>
                     <img src="./asset/logo.png" alt="" class="card-img">
                 </div>
+
                 <div class="card-info">
-                    <h2>Name</h2>
-                    <h3>Project Description</h3>
+                    <h2>Event Mate 2</h2>
+                    <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open.</h3>
                 </div>
                 <div class="card-tech">
                     <span>html</span>
                     <span>html</span>
                     <span>html</span>
                     <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
                 </div>
-            </div>
-            <div class="project-card">
+            </article>
+
+            <article class="project-card">
                 <div class="logo">
+                    <div class="gradient"></div>
                     <img src="./asset/logo.png" alt="" class="card-img">
                 </div>
+
                 <div class="card-info">
-                    <h2>Name</h2>
-                    <h3>Project Description</h3>
-                </div>
-                <div class="card-tech">
-                    <span>HEEEEEEELLLO</span>
-                    <span>html</span>
-                    <span>html</span>
-                    <span>html</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="logo">
-                    <img src="./asset/logo.png" alt="" class="card-img">
-                </div>
-                <div class="card-info">
-                    <h2>Name</h2>
-                    <h3>Project Description</h3>
+                    <h2>Event Mate 3</h2>
+                    <h3>Event Mate is an android app that makes signing up for community events fair and stress-free. Instead of racing to register, users join a waiting list and are randomly selected when spots open. Organizers can create events, upload posters, manage participants, and notify winners - all from within the app. With QR code access, personalized profiles, and optional location-based entry, Event Mate ensures accessibility and equal opportunity for everyone.</h3>
                 </div>
                 <div class="card-tech">
                     <span>html</span>
                     <span>html</span>
                     <span>html</span>
                     <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
                 </div>
-            </div>
-        </div>
-        
+            </article>
+        </template>
+
+        <section class="projects"></section>
+
     </div>
 
     
 </body>
 
+<script src="swiper-bundle.min.js"></script>
 <script src="main.js"></script>
 </html>

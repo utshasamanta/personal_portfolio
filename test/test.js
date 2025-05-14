@@ -7,8 +7,6 @@ overlayText.innerText = headerText.textContent;
 
 
 //Remove swiper classes
-
-
 let swiperInstance = null;
 
 function createSwiperLayout() {
@@ -27,24 +25,29 @@ function createSwiperLayout() {
     const pagination = document.createElement('div');
     pagination.className = 'swiper-pagination';
 
-    const card = document.querySelector('#project-card-template').content.cloneNode(true);
-    card.querySelector('.project-card').classList.add('swiper-slide');
-    swiperWrapper.appendChild(card);
+    const cardTemplate = document.querySelector('#project-card-template').content.cloneNode(true);
+    const cards = cardTemplate.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+      card.classList.add('swiper-slide');
+      swiperWrapper.appendChild(card)
+    });
 
     wrapperContainer.appendChild(swiperWrapper);
-    swiperWrapper.appendChild(pagination);
+    wrapperContainer.appendChild(pagination);
     container.appendChild(wrapperContainer);
     projects.appendChild(container);
 
-    swiperInstance = new Swiper('.all-projects', {
+    requestAnimationFrame(() => {
+      swiperInstance = new Swiper('.all-projects', {
         loop: true,
         spaceBetween: 32,
-      
-        // If we need pagination
         pagination: {
           el: '.swiper-pagination',
+          clickable: true
         },
-        autoHeight: true
+        autoHeight: true,
+      });
     });
 }
 
@@ -72,19 +75,6 @@ function toggleLayout() {
   
 window.addEventListener('load', toggleLayout);
 window.addEventListener('resize', toggleLayout);
-
-
-
-
-// let swipeerInstance = new Swiper('.all-projects', {
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-// });
-
 
 //For Canvas
 var c = document.getElementById('canv');
