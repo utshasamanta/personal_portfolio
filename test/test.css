@@ -68,6 +68,10 @@ body {
 }
 
 
+.header {
+    height: 100vh;
+}
+
 .hero {
     position: relative;
     isolation: isolate;
@@ -110,7 +114,7 @@ body {
     position: absolute;
     left: 0;
     top: 0px;
-    color: #2e2c2c;
+    color: #0a2540;
     z-index: 2;
     opacity: 0.7;
 }
@@ -124,7 +128,7 @@ canvas {
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     --max-width: 60rem;
     width: min(100% - 2rem, var(--max-width));
     margin-inline: auto;
@@ -133,7 +137,18 @@ canvas {
 }
 
 .intro {
-    padding-block: 2rem;
+    --max-width: 60rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-top: 4rem;
+    margin-inline: auto;
+}
+
+.intro h2 {
+    line-height: 1.1;
+    text-align: justify;
+    padding-bottom: 1rem;
+    color: #425466;
+    font-weight: 450;
 }
 
 .tech {
@@ -158,6 +173,7 @@ canvas {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .wexp-card {
@@ -172,7 +188,7 @@ canvas {
     /* box-shadow: 5px 7px 8px #838282; */
     background-color: #fff;
     padding: 2rem;
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .wexp-card::after {
@@ -188,7 +204,7 @@ canvas {
     padding: 2px;
     border-radius: 12px;
     transform: scale(0);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .wexp-card::before {
@@ -204,7 +220,7 @@ canvas {
     padding: 2px;
     border-radius: 12px;
     transform: scale(0);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .wexp-card:hover::before,
@@ -216,6 +232,48 @@ canvas {
 .wexp-card:hover {
     background-color: rgb(235, 235, 235); /* slightly more transparent */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);   /* optional shadow for lift */
+}
+
+.wexp-role {
+    padding-left: 1.2em;
+    padding-bottom: 0.5rem;
+    color: #0a2540;
+    font-weight: 450;
+}
+
+.wexp-role h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+
+.wexp-role h3 {
+    padding-top: 0.1rem;
+}
+
+.wexp-role p {
+    font-size: 0.8rem;
+    padding-top: 0.2rem;
+}
+
+
+.wexp-work li {
+    position: relative;
+    text-align: justify;
+    padding-left: 1.2em;
+    padding-bottom: 0.5rem;
+    line-height: 1.1;
+    color: #425466;
+    font-weight: 450;
+}
+  
+.wexp-work li::before {
+    content: "⮞";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #635bff;
 }
 
 
@@ -268,11 +326,14 @@ canvas {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    color: #425466;
+    font-weight: 450;
 }
 
 .card-info h2 {
     font-size: 1.5rem;
     padding-block: 1rem;
+    color: #0a2540;
 }
 
 .card-info h3 {
