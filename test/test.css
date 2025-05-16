@@ -68,6 +68,60 @@ body {
 }
 
 
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Ensure it appears above the canvas */
+    --max-width: 60rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.nav-logo {
+    padding-inline: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-options a {
+    padding-inline: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #0a2540;
+    opacity: 0.3;
+}
+
+.nav-options img {
+    height: 2rem;
+    padding-inline: 1rem;
+}
+
+.nav-vertical {
+    display: none;
+}
+
+
 .header {
     height: 100vh;
 }
