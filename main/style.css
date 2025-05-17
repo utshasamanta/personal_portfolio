@@ -408,6 +408,7 @@ canvas {
 }
   
 .wexp-work li::before {
+    font-family: 'Noto Sans Symbols 2', 'Raleway', sans-serif;
     content: "⮞";
     position: absolute;
     left: 0;
