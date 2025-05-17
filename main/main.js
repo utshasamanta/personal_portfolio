@@ -76,6 +76,32 @@ function toggleLayout() {
 window.addEventListener('load', toggleLayout);
 window.addEventListener('resize', toggleLayout);
 
+
+
+//For Navbar
+const sidebar = document.querySelector('#sidebar');
+const ham = document.querySelector('#ham');
+const cross = document.querySelector('#cross');
+const mainbar = document.querySelector('#mainbar');
+
+cross.addEventListener('click', function () {
+    sidebar.style.display = 'none';
+    mainbar.style.display = 'flex';
+    document.body.style.overflow = 'auto';
+});
+
+ham.addEventListener('click', function () {
+    sidebar.style.display = 'flex';
+    mainbar.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+});
+
+
+
+
+
+
+
 //For Canvas
 var c = document.getElementById('canv');
 var $ = c.getContext('2d');
@@ -104,7 +130,7 @@ var run = function() {
       col(x, y, R(x,y,t), G(x,y,t), B(x,y,t));
     }
   }
-  t = t + 0.01;
+  t = t + 0.005;
   window.requestAnimationFrame(run);
 }
 
