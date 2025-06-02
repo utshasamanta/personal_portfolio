@@ -250,7 +250,7 @@ canvas {
 .main {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 2rem;
     /* border: 2px solid green; */
     --max-width: 60rem;
     width: min(100% - 2rem, var(--max-width));
